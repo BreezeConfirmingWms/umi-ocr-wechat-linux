@@ -25,8 +25,7 @@
 
 
 实测速度310页18w字的技术书籍ocr时间为 :watch: ​5:14
-
-![image-20250528220051877](/home/yum/.config/Typora/typora-user-images/image-20250528220051877.png)
+![image-20250528220051877](https://breeze-1324134976.cos.ap-guangzhou.myqcloud.com/20250528220831996.png?q-sign-algorithm=sha1&q-ak=AKIDTzOgmeKm02rSpyuqZ5OTL1UjllcIrEvT&q-sign-time=1748441311;8999999999&q-key-time=1748441311;8999999999&q-header-list=host&q-url-param-list=&q-signature=9147201a740bd53d3fe81412acb188700d435607)
 
 
 
@@ -40,5 +39,4 @@ self.outputPath = f"{self.dir}/{self.fileName}.pdf"
 ```
 
 
-
-![image-20250528220635546](/home/yum/.config/Typora/typora-user-images/image-20250528220635546.png)
+![image-20250528220635546](https://breeze-1324134976.cos.ap-guangzhou.myqcloud.com/20250528220834080.png?q-sign-algorithm=sha1&q-ak=AKIDTzOgmeKm02rSpyuqZ5OTL1UjllcIrEvT&q-sign-time=1748441313;8999999999&q-key-time=1748441313;8999999999&q-header-list=host&q-url-param-list=&q-signature=e045a9ade385d1574efecd1b7c58d14d1d6080f4)
