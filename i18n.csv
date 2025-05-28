@@ -1,0 +1,6 @@
+key,en_US
+微信OCR(自带模型，不填则用插件自带或填写自己的路径),WeChat OCR (Use built-in model if not specified or provide your own path)
+wcocr 文件路径,Path to wcocr file
+wcocr 的文件路径。如果您不填写，将使用插件自带的 wcocr；如果您填写，则优先使用您指定的路径。,"The file path of wcocr. If you do not fill it in, the built-in wcocr of the plugin will be used; if you fill it in, the path you specify will be prioritized"
+微信的完整安装路径,Complete installation path of WeChat
+微信的完整安装路径，例如：/opt/wechat/。如果您不填写，将使用插件自带的默认路径；如果您填写，则优先使用您指定的路径。,"The complete installation path of WeChat, for example: /opt/wechat/. If you do not fill it in, the default path of the plugin will be used; if you fill it in, the path you specify will be prioritized"
