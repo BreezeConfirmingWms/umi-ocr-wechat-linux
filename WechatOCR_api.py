@@ -6,8 +6,10 @@ import psutil
 CurrentDir = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_WECHAT_OCR_DIR = os.path.join("/opt/wechat/wxocr")
 DEFAULT_WECHAT_DIR = os.path.join("/opt/wechat")
-
+sys.path.append(os.path.join(os.path.dirname(__file__)))
 import wcocr
+
+
 class Api:
     def __init__(self, globalArgd):
         """
@@ -35,7 +37,7 @@ class Api:
                 if proc.name() == "wcocr":
                     proc.terminate()  # 尝试优雅地终止进程
                     try:
-                        proc.wait(timeout=3)  # 等待进程结束，最多3秒
+                        proc.wait(timeout=1)  # 等待进程结束，最多3秒
                     except psutil.TimeoutExpired:
                         proc.kill()  # 如果超时未结束，强制杀死
                     print(f"已终止进程：{proc.name()} (PID: {proc.pid})")
@@ -84,7 +86,8 @@ class Api:
         start_time = time.time()
         
         
-        self._last_results = wcocr.ocr(imgPath)
+        results = wcocr.ocr(imgPath)
+        self._ocr_result_callback(results)
         # 等待任务完成，带超时机制
         timeout = 10
         if time.time() - start_time > timeout:
@@ -95,7 +98,7 @@ class Api:
         else:
             return {"code": 102, "data": "[Error] 未能获取 OCR 结果"}
 
-    def _ocr_result_callback(self, img_path: str, results: dict):
+    def _ocr_result_callback(self,results: dict):
         """
         OCR 结果回调函数，将结果转换为统一格式
         """
